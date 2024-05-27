@@ -1,5 +1,7 @@
 let score = 0;
 
+Telegram.WebApp.ready();
+
 function tapMiner() {
     score += 10;
     document.getElementById('score').innerText = `GOLD: ${score}`;
