@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <video autoplay muted playsinline id="loading-video">
+            <source src="loading.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="main-menu" style="display: none;">
+        <h1>GOLD</h1>
+        <img src="button_start.png" alt="Start Game" onclick="startGame()" class="menu-button">
+        <img src="button_miners.png" alt="Miners" onclick="showMiners()" class="menu-button">
+        <img src="button_settings.png" alt="Settings" onclick="showSettings()" class="menu-button">
+        <img src="button_boost.png" alt="Boost" onclick="showBoost()" class="menu-button">
+    </div>
+    <div id="main-screen" style="display: none;">
+        <div id="game-container">
+            <div id="score">GOLD: 0</div>
+            <div id="miner-container">
+                <img src="miner.png" alt="Miner" id="miner" onclick="tapMiner()">
+                <div id="gold-animation" style="display: none;">+10</div>
+            </div>
+        </div>
+    </div>
+    <div id="miners-screen" style="display: none;">
+        <h1>Miners</h1>
+        <ul id="miners-list"></ul>
+        <img src="button_back.png" alt="Back" onclick="backToMenu()" class="menu-button">
+    </div>
+    <div id="settings-screen" style="display: none;">
+        <h1>Settings</h1>
+        <input type="text" id="nickname" placeholder="Enter Nickname">
+        <img src="button_back.png" alt="Back" onclick="backToMenu()" class="menu-button">
+        <button onclick="saveSettings()">Save</button>
+    </div>
+    <div id="boost-screen" style="display: none;">
+        <h1>Boost</h1>
+        <div class="card" onclick="selectBoost(1)">Boost 1</div>
+        <div class="card" onclick="selectBoost(2)">Boost 2</div>
+        <div class="card" onclick="selectBoost(3)">Boost 3</div>
+        <div class="card" onclick="selectBoost(4)">Boost 4</div>
+        <img src="button_back.png" alt="Back" onclick="backToMenu()" class="menu-button">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
